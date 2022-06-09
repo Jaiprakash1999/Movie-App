@@ -6,6 +6,7 @@ const Movie = () => {
   const { movie } = router.query
   const getMovieRequest = async (resp) => {
     const url = `http://www.omdbapi.com/?i=${movie}&apikey=3392ffe5`;
+    // const url = `http://127.0.0.1:3000/movie`;
     const response = await fetch(url);
     const responseJSON = await response.json();
     console.log(responseJSON);
@@ -60,5 +61,4 @@ const Movie = () => {
       </>
   )
 }
-
 export default Movie
